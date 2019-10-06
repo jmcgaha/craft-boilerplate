@@ -1,0 +1,16 @@
+.button {
+  @apply text-white inline-block rounded;
+
+  &--primary {
+    @apply bg-blue-500;
+
+    &:hover,
+    &:focus {
+      @apply bg-blue-300;
+    }
+  }
+
+  &--large {
+    @apply px-12 py-4;
+  }
+}

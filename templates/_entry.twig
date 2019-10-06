@@ -1,0 +1,11 @@
+{% extends '_layout' %}
+
+{% block content %}
+
+{% for block in entry.pageBuilder.all() %}
+
+	{% include '_blocks/' ~ block.type.handle %}
+
+{% endfor %}
+
+{% endblock %}

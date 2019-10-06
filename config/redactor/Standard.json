@@ -1,0 +1,6 @@
+{
+  "buttons": ["html", "format", "bold", "italic", "lists", "link", "image", "video"],
+  "plugins": ["fullscreen", "video"],
+  "linkNewTab": true,
+  "toolbarFixed": true
+}

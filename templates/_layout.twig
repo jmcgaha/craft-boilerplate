@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="index,follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	{% include '_partials/favicons' %}
+
+	<link rel="stylesheet" type="text/css" href="{{ rev('/assets/app.css') }}">
+</head>
+
+<body>
+
+{% include '_partials/nav' %}
+
+{% block content %}{% endblock %}
+
+<script src="{{ rev('/assets/manifest.js') }}"></script>
+{# If no 3rd-party JS libraries are being imported, vendor.js may not exist in production builds. Delete the following line if that's the case #}
+<script src="{{ rev('/assets/vendor.js') }}"></script>
+<script src="{{ rev('/assets/app.js') }}"></script>
+
+</body>
+</html>

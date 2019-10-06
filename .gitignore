@@ -1,0 +1,29 @@
+# Uploaded files
+public/uploads
+
+# Misc files
+.DS_Store
+Thumbs.db
+*.sublime-workspace
+*.sublime-project
+*.vscode
+
+# Craft Environment Configs
+.env
+
+# Logs
+*.log
+
+# Dependency directories
+/node_modules
+/vendor
+
+# Locally compiled CSS/JS
+public/assets
+mix-manifest.json
+
+# Docker files
+.dbdata
+.docker/dbdata
+.docker/containerrun
+.docker/.datadir
