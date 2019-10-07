@@ -4,7 +4,7 @@ return [
 
 	'*' => [
     'showLabel' => true,
-		'labelText' => CRAFT_ENVIRONMENT,
+		'labelText' => strtoupper(CRAFT_ENVIRONMENT),
     'prefixText' => null,
     'suffixText' => null,
 		'textColor' => '#fff',
