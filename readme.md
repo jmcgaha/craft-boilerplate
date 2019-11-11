@@ -121,7 +121,9 @@ More detailed information about the default structure can be found here: https:/
 
 <hr style="margin: 80px 0;">
 
-<p align="center"><a href="https://craftcms.com/" target="_blank"><img width="312" height="90" src="https://craftcms.com/craftcms.svg" alt="Craft CMS"></a></p>
+<a href="https://craftcms.com/" rel="noopener" target="_blank"><img width="247" height="60" src="https://craftcms.com/craftcms.svg" alt="Craft CMS"></a>
+
+<br>
 
 ## About Craft CMS
 
