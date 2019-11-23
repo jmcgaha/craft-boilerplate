@@ -23,7 +23,7 @@
     "laravel-mix": "^5.0.0",
     "laravel-mix-file-hash-versioning": "^1.0.0",
     "purgecss-webpack-plugin": "^1.6.0",
-    "sass": "^1.23.3",
+    "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
     "tailwindcss": "^1.1.3",
     "tailwindcss-grid": "^1.2.1",
