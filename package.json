@@ -18,7 +18,7 @@
     "browser-sync-webpack-plugin": "^2.2.2",
     "cross-env": "^6.0.3",
     "dotenv": "^8.2.0",
-    "favicons": "^5.4.1",
+    "favicons": "^5.5.0",
     "glob-all": "^3.1.0",
     "laravel-mix": "^5.0.0",
     "laravel-mix-file-hash-versioning": "^1.0.0",
