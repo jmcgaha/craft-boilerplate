@@ -24,7 +24,7 @@
     "craftcms/redactor": "^2.4.0",
     "nystudio107/craft-templatecomments": "^1.1.2",
     "rias/craft-position-fieldtype": "^1.0.14",
-    "topshelfcraft/environment-label": "^3.1.5",
+    "topshelfcraft/environment-label": "^3.2.0",
     "vlucas/phpdotenv": "^3.6.0"
   },
   "autoload": {
