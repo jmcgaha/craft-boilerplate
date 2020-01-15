@@ -1,52 +1,52 @@
 {
-  "name": "craft-boilerplate",
-  "version": "1.0.0",
-  "description": "This project is based on the official [Craft 3 starter project](https://github.com/craftcms/craft/)",
-  "main": "webpack.mix.js",
-  "repository": {
-    "type": "git",
-    "url": "github.com:jmcgaha/craft-boilerplate.git"
-  },
-  "author": "Jonathan McGaha",
-  "bugs": {
-    "url": "https://github.com/jmcgaha/craft-boilerplate/issues"
-  },
-  "homepage": "https://github.com/jmcgaha/craft-boilerplate#readme",
-  "dependencies": {
-    "@tailwindcss/custom-forms": "^0.2.1",
-    "browser-sync": "^2.26.7",
-    "browser-sync-webpack-plugin": "^2.2.2",
-    "cross-env": "^6.0.3",
-    "dotenv": "^8.2.0",
-    "favicons": "^5.5.0",
-    "glob-all": "^3.1.0",
-    "laravel-mix": "^5.0.1",
-    "laravel-mix-file-hash-versioning": "^1.0.0",
-    "purgecss-webpack-plugin": "^1.6.0",
-    "sass": "^1.24.2",
-    "sass-loader": "^8.0.0",
-    "tailwindcss": "^1.1.4",
-    "tailwindcss-grid": "^1.2.1",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "npm run dev -- --watch",
-    "prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "staging": "npm run prod",
-    "pull-database-prod": "./scripts/pull_db-prod.sh",
-    "pull-database-staging": "./scripts/pull_db-staging.sh",
-    "pull-assets-prod": "./scripts/pull_assets-prod.sh",
-    "pull-assets-staging": "./scripts/pull_assets-staging.sh",
-    "craft-migrate": "./craft migrate/all",
-    "craft-sync": "./craft project-config/sync",
-    "composer-update": "composer update",
-    "composer-install": "composer install",
-    "composer-outdated": "composer outdated",
-    "favicons": "node favicons.js"
-  }
+	"name": "craft-boilerplate",
+	"version": "1.0.0",
+	"description": "This project is based on the official [Craft 3 starter project](https://github.com/craftcms/craft/)",
+	"main": "webpack.mix.js",
+	"repository": {
+		"type": "git",
+		"url": "github.com:jmcgaha/craft-boilerplate.git"
+	},
+	"author": "Jonathan McGaha",
+	"bugs": {
+		"url": "https://github.com/jmcgaha/craft-boilerplate/issues"
+	},
+	"homepage": "https://github.com/jmcgaha/craft-boilerplate#readme",
+	"dependencies": {
+		"@tailwindcss/custom-forms": "^0.2.1",
+		"browser-sync": "^2.26.7",
+		"browser-sync-webpack-plugin": "^2.2.2",
+		"cross-env": "^6.0.3",
+		"dotenv": "^8.2.0",
+		"favicons": "^5.5.0",
+		"glob-all": "^3.1.0",
+		"laravel-mix": "^5.0.1",
+		"laravel-mix-file-hash-versioning": "^1.0.0",
+		"purgecss-webpack-plugin": "^1.6.0",
+		"sass": "^1.24.4",
+		"sass-loader": "^8.0.2",
+		"tailwindcss": "^1.1.4",
+		"tailwindcss-grid": "^1.2.1",
+		"vue-template-compiler": "^2.6.11"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions"
+	],
+	"scripts": {
+		"dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"watch": "npm run dev -- --watch",
+		"prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"staging": "npm run prod",
+		"pull-database-prod": "./scripts/pull_db-prod.sh",
+		"pull-database-staging": "./scripts/pull_db-staging.sh",
+		"pull-assets-prod": "./scripts/pull_assets-prod.sh",
+		"pull-assets-staging": "./scripts/pull_assets-staging.sh",
+		"craft-migrate": "./craft migrate/all",
+		"craft-sync": "./craft project-config/sync",
+		"composer-update": "composer update",
+		"composer-install": "composer install",
+		"composer-outdated": "composer outdated",
+		"favicons": "node favicons.js"
+	}
 }
