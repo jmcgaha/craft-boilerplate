@@ -26,7 +26,6 @@
 		"sass": "^1.25.0",
 		"sass-loader": "^8.0.2",
 		"tailwindcss": "^1.2.0",
-		"tailwindcss-grid": "^1.2.1",
 		"vue-template-compiler": "^2.6.11"
 	},
 	"browserslist": [
