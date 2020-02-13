@@ -21,9 +21,3 @@ Thumbs.db
 # Locally compiled CSS/JS
 public/assets
 mix-manifest.json
-
-# Docker files
-.dbdata
-.docker/dbdata
-.docker/containerrun
-.docker/.datadir
