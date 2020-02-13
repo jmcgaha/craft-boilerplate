@@ -15,11 +15,5 @@ return [
     'password' => getenv('DB_PASSWORD'),
     'schema' => getenv('DB_SCHEMA'),
     'tablePrefix' => getenv('DB_TABLE_PREFIX')
-  ],
-
-  // Dev environment settings
-  'dev' => [
-    // Use socket for MAMP users
-    'unixSocket' => getenv('DB_SOCKET')
   ]
 ];
