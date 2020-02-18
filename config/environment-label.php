@@ -2,27 +2,27 @@
 
 return [
 
-	'*' => [
+  '*' => [
     'showLabel' => true,
-		'labelText' => strtoupper(CRAFT_ENVIRONMENT),
+    'labelText' => strtoupper(CRAFT_ENVIRONMENT),
     'prefixText' => null,
     'suffixText' => null,
-		'textColor' => '#fff',
-	],
+    'textColor' => '#fff',
+  ],
 
-	// Dev environment settings
-	'dev' => [
-		'labelColor' => '#000',
+  // Dev environment settings
+  'dev' => [
+    'labelColor' => '#000',
   ],
 
   // Staging environment settings
   'staging' => [
-		'labelColor' => '#fc3',
-		'textColor' => '#000',
+    'labelColor' => '#fc3',
+    'textColor' => '#000',
   ],
 
   // Production environment settings
   'production' => [
-		'labelColor' => '#cc5643',
+    'labelColor' => '#cc5643',
   ]
 ];
