@@ -20,12 +20,12 @@
 	},
 	"require": {
 		"clubstudioltd/craft-asset-rev": "^6.0.2",
-		"craftcms/cms": "~3.4.11",
+		"craftcms/cms": "~3.4.12",
 		"craftcms/redactor": "^2.6.1",
 		"nystudio107/craft-templatecomments": "^1.1.2",
 		"rias/craft-position-fieldtype": "^1.0.15",
 		"topshelfcraft/environment-label": "^3.2.0",
-		"vlucas/phpdotenv": "^3.6.1"
+		"vlucas/phpdotenv": "^3.6.2"
 	},
 	"autoload": {
 		"psr-4": {}
