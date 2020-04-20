@@ -25,7 +25,7 @@
 		"nystudio107/craft-templatecomments": "^1.1.2",
 		"rias/craft-position-fieldtype": "^1.0.15",
 		"topshelfcraft/environment-label": "^3.2.0",
-		"vlucas/phpdotenv": "^3.6.2"
+		"vlucas/phpdotenv": "^3.6.3"
 	},
 	"autoload": {
 		"psr-4": {}
