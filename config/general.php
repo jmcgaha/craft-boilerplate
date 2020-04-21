@@ -53,6 +53,8 @@ return [
       '@basePath' => CRAFT_BASE_PATH . '/public/',
       '@baseUrl' => getenv('DEFAULT_SITE_URL'),
     ],
+
+    'resourceBasePath' => '@basePath/cpresources',
   ],
 
   // Dev environment settings
