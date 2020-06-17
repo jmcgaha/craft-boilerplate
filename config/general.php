@@ -8,6 +8,8 @@
  * @see \craft\config\GeneralConfig
  */
 
+use craft\helpers\App;
+
 return [
   // Global settings
   '*' => [
@@ -21,7 +23,7 @@ return [
     'cpTrigger' => 'admin',
 
     // The secure key Craft will use for hashing and encrypting data
-    'securityKey' => getenv('SECURITY_KEY'),
+    'securityKey' => App::env('SECURITY_KEY'),
 
     // Whether to save the project config out to config/project.yaml
     // (see https://docs.craftcms.com/v3/project-config.html)
@@ -46,12 +48,12 @@ return [
     ),
 
     'siteUrl' => [
-      'en_us' => getenv('DEFAULT_SITE_URL'),
+      'en_us' => App::env('DEFAULT_SITE_URL'),
     ],
 
     'aliases' => [
       '@basePath' => CRAFT_BASE_PATH . '/public/',
-      '@baseUrl' => getenv('DEFAULT_SITE_URL'),
+      '@baseUrl' => App::env('DEFAULT_SITE_URL'),
     ],
 
     'resourceBasePath' => '@basePath/cpresources',
@@ -65,8 +67,8 @@ return [
     'enableTemplateCaching' => false,
 
     // Use proper MySQL commands for MAMP users only
-    'backupCommand' => getenv('BACKUP_COMMAND'),
-    'restoreCommand' => getenv('RESTORE_COMMAND'),
+    'backupCommand' => App::env('BACKUP_COMMAND'),
+    'restoreCommand' => App::env('RESTORE_COMMAND'),
   ],
 
   // Staging environment settings
