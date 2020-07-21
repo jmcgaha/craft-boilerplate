@@ -14,17 +14,17 @@
 	"homepage": "https://github.com/jmcgaha/craft-boilerplate#readme",
 	"dependencies": {
 		"@tailwindcss/custom-forms": "^0.2.1",
-		"browser-sync": "^2.26.7",
+		"browser-sync": "^2.26.12",
 		"browser-sync-webpack-plugin": "^2.2.2",
 		"cross-env": "^7.0.2",
 		"dotenv": "^8.2.0",
-		"favicons": "^6.1.0",
+		"favicons": "^6.2.0",
 		"laravel-mix": "^5.0.4",
 		"laravel-mix-purgecss": "^5.0.0",
-		"laravel-mix-versionhash": "^1.1.3",
-		"sass": "^1.26.8",
-		"sass-loader": "^8.0.2",
-		"tailwindcss": "^1.4.6",
+		"laravel-mix-versionhash": "^1.1.6",
+		"sass": "^1.26.10",
+		"sass-loader": "^9.0.2",
+		"tailwindcss": "^1.6.2",
 		"vue-template-compiler": "^2.6.11"
 	},
 	"browserslist": [
