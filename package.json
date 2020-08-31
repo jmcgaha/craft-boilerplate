@@ -19,13 +19,13 @@
 		"cross-env": "^7.0.2",
 		"dotenv": "^8.2.0",
 		"favicons": "^6.2.0",
-		"laravel-mix": "^5.0.4",
+		"laravel-mix": "^5.0.5",
 		"laravel-mix-purgecss": "^5.0.0",
 		"laravel-mix-versionhash": "^1.1.6",
 		"sass": "^1.26.10",
-		"sass-loader": "^9.0.3",
-		"tailwindcss": "^1.7.2",
-		"vue-template-compiler": "^2.6.11"
+		"sass-loader": "^10.0.1",
+		"tailwindcss": "^1.7.6",
+		"vue-template-compiler": "^2.6.12"
 	},
 	"browserslist": [
 		"> 1%",

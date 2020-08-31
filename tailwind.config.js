@@ -41,5 +41,12 @@ module.exports = {
 	variants: {
 		display: ["responsive", "hover", "focus"]
 	},
-	plugins: [require("@tailwindcss/custom-forms")]
+	plugins: [require("@tailwindcss/custom-forms")],
+	experimental: {
+		applyComplexClasses: true,
+		defaultLineHeights: true,
+		extendedFontScale: true,
+		extendedSpacingScale: true,
+		uniformColorPalette: true,
+	},
 };
