@@ -21,9 +21,9 @@
 		"laravel-mix": "^5.0.7",
 		"laravel-mix-purgecss": "^5.0.0",
 		"laravel-mix-versionhash": "^1.1.7",
-		"sass": "^1.27.0",
-		"sass-loader": "^10.0.4",
-		"tailwindcss": "^1.9.5",
+		"sass": "^1.28.0",
+		"sass-loader": "^10.0.5",
+		"tailwindcss": "^1.9.6",
 		"vue-template-compiler": "^2.6.12"
 	},
 	"browserslist": [
