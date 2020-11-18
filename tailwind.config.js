@@ -42,14 +42,4 @@ module.exports = {
 		display: ["responsive", "hover", "focus"]
 	},
 	plugins: [],
-	future: {
-		removeDeprecatedGapUtilities: true,
-	},
-	experimental: {
-		applyComplexClasses: true,
-		defaultLineHeights: true,
-		extendedFontScale: true,
-		extendedSpacingScale: true,
-		uniformColorPalette: true,
-	},
 };
