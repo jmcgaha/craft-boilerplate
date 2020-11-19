@@ -19,7 +19,7 @@ return [
     // Whether generated URLs should omit "index.php"
     'omitScriptNameInUrls' => true,
 
-    // Control Panel trigger word
+    // Control panel trigger word
     'cpTrigger' => 'admin',
 
     // The secure key Craft will use for hashing and encrypting data
@@ -60,6 +60,9 @@ return [
     // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
     'devMode' => true,
 
+    // Prevent crawlers from indexing pages and following links
+    'disallowRobots' => true,
+
     'enableTemplateCaching' => false,
 
     // Use proper MySQL commands for MAMP users only
@@ -72,13 +75,22 @@ return [
     // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
     'devMode' => true,
 
-    // Set this to `false` to prevent administrative changes from being made on staging
+    // Prevent crawlers from indexing pages and following links
+    'disallowRobots' => true,
+
+    // Set this to `false` to prevent administrative changes from being made on Staging
     'allowAdminChanges' => false,
+
+    // Don’t allow updates on Staging
+    'allowUpdates' => false,
   ],
 
   // Production environment settings
   'production' => [
-    // Set this to `false` to prevent administrative changes from being made on production
+    // Set this to `false` to prevent administrative changes from being made on Production
     'allowAdminChanges' => false,
+
+    // Don’t allow updates on Production
+    'allowUpdates' => false,
   ],
 ];
