@@ -13,30 +13,26 @@
 	},
 	"homepage": "https://github.com/jmcgaha/craft-boilerplate#readme",
 	"dependencies": {
-		"autoprefixer": "^10.0.2",
 		"browser-sync": "^2.26.13",
 		"browser-sync-webpack-plugin": "^2.2.2",
-		"cross-env": "^7.0.2",
 		"dotenv": "^8.2.0",
 		"favicons": "^6.2.0",
-		"laravel-mix": "^5.0.9",
-		"laravel-mix-purgecss": "^5.0.0",
+		"laravel-mix": "^6.0.0-beta.14",
 		"laravel-mix-versionhash": "^1.1.7",
 		"postcss": "^8.1.7",
+		"resolve-url-loader": "^3.1.2",
 		"sass": "^1.29.0",
 		"sass-loader": "^10.1.0",
-		"tailwindcss": "^2.0.1",
-		"vue-template-compiler": "^2.6.12"
+		"tailwindcss": "^2.0.1"
 	},
 	"browserslist": [
 		"> 1%",
 		"last 2 versions"
 	],
 	"scripts": {
-		"dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"watch": "npm run dev -- --watch",
-		"prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-		"staging": "npm run prod",
+		"dev": "mix",
+		"watch": "mix watch",
+		"prod": "mix --production",
 		"pull-database-prod": "./scripts/pull_db-prod.sh",
 		"pull-database-staging": "./scripts/pull_db-staging.sh",
 		"pull-assets-prod": "./scripts/pull_assets-prod.sh",

@@ -1,22 +1,16 @@
 require("dotenv").config();
 const mix = require("laravel-mix");
 const tailwindcss = require("tailwindcss");
-require("laravel-mix-purgecss");
 
-mix.js(["assets/javascript/app.js"], "public/assets/app.js").extract();
+mix.js(["assets/javascript/app.js"], "public/assets/app.js").extract().version();
 
 mix
-	.sass("assets/sass/app.scss", "public/assets/app.css")
+	.sass("assets/sass/app.scss", "assets/app.css")
 	.setPublicPath("public")
 	.options({
 		processCssUrls: false,
 		postCss: [tailwindcss("./tailwind.config.js")]
-	})
-	.purgeCss({
-		enabled: mix.inProduction(),
-		content: ["./templates/**/*.twig", "./assets/javascript/**/*.js"],
-		extensions: ["html", "js", "php", "twig", "vue"]
-	});
+	}).version();
 
 // Run BrowserSync Locally, off by default
 // if (!mix.inProduction()) {
@@ -30,6 +24,7 @@ mix
 
 // Only run in Production
 if (mix.inProduction()) {
-	require("laravel-mix-versionhash");
-	mix.versionHash();
+	// TODO: This isn't working with Mix 6. Could remove .version() when it's working again.
+	// require("laravel-mix-versionhash");
+	// mix.versionHash();
 }
