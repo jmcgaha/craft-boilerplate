@@ -166,7 +166,9 @@ module.exports = {
 		}
 	},
 	variants: {
-		display: ["responsive", "hover", "focus"]
+		extend: {
+			display: ['hover', 'focus']
+		}
 	},
 	plugins: [],
 };

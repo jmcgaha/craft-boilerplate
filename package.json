@@ -19,11 +19,11 @@
 		"favicons": "^6.2.0",
 		"laravel-mix": "^6.0.0-beta.14",
 		"laravel-mix-versionhash": "^1.1.7",
-		"postcss": "^8.1.10",
+		"postcss": "^8.2.1",
 		"resolve-url-loader": "^3.1.2",
-		"sass": "^1.29.0",
+		"sass": "^1.30.0",
 		"sass-loader": "^10.1.0",
-		"tailwindcss": "^2.0.1"
+		"tailwindcss": "^2.0.2"
 	},
 	"browserslist": [
 		"> 1%",
