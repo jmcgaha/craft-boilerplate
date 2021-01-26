@@ -20,12 +20,12 @@
 	},
 	"require": {
 		"clubstudioltd/craft-asset-rev": "^6.0.2",
-		"craftcms/cms": "~3.5.17",
+		"craftcms/cms": "~3.5.19",
 		"craftcms/redactor": "^2.8.5",
 		"hybridinteractive/craft-position-fieldtype": "^1.0.16",
 		"nystudio107/craft-templatecomments": "^1.1.2",
 		"topshelfcraft/environment-label": "^3.2.0",
-		"vlucas/phpdotenv": "^3.6.7"
+		"vlucas/phpdotenv": "^3.6.8"
 	},
 	"autoload": {
 		"psr-4": {}
@@ -34,7 +34,7 @@
 		"sort-packages": true,
 		"optimize-autoloader": true,
 		"platform": {
-			"php": "7.4.0"
+			"php": "7.4.2"
 		}
 	},
 	"scripts": {
