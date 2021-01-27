@@ -2,7 +2,7 @@
 
 # Pull Database
 #
-# Pull staging database down from a remote and restore it to to local
+# Pull staging database down from a remote and restore it to local
 #
 # @author    nystudio107
 # @copyright Copyright (c) 2017 nystudio107
