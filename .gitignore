@@ -4,6 +4,7 @@ public/uploads
 # Misc files
 .DS_Store
 Thumbs.db
+*.nova
 *.sublime-workspace
 *.sublime-project
 *.vscode
