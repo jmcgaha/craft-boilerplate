@@ -43,10 +43,6 @@ return [
       'subRight' => true,
     ),
 
-    'siteUrl' => [
-      'en_us' => App::env('DEFAULT_SITE_URL'),
-    ],
-
     'aliases' => [
       '@basePath' => CRAFT_BASE_PATH . '/public/',
       '@baseUrl' => App::env('DEFAULT_SITE_URL'),
