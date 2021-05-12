@@ -20,7 +20,7 @@
 	},
 	"require": {
 		"clubstudioltd/craft-asset-rev": "^6.0.2",
-		"craftcms/cms": "~3.6.13",
+		"craftcms/cms": "~3.6.14",
 		"craftcms/redactor": "^2.8.7",
 		"hybridinteractive/craft-position-fieldtype": "^1.0.17",
 		"nystudio107/craft-templatecomments": "^1.1.2",
