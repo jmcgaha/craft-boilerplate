@@ -20,9 +20,9 @@
 use craft\helpers\App;
 
 return [
-	'id' => App::env('APP_ID') ?: 'CraftCMS',
-  'modules' => [
-    // 'my-module' => \modules\Module::class,
-  ],
-  //'bootstrap' => ['my-module'],
+    'id' => App::env('APP_ID') ?: 'CraftCMS',
+    'modules' => [
+        // 'my-module' => \modules\Module::class,
+    ],
+    //'bootstrap' => ['my-module'],
 ];
