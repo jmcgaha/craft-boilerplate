@@ -14,12 +14,10 @@
 
 LOCAL_IGNORED_DB_TABLES_STRING=""
 REMOTE_IGNORED_DB_TABLES_STRING=""
-STAGING_IGNORED_DB_TABLES_STRING=""
 for TABLE in "${EXCLUDED_DB_TABLES[@]}"
 do
    LOCAL_IGNORED_DB_TABLES_STRING+="--ignore-table=${LOCAL_DB_NAME}.${GLOBAL_DB_TABLE_PREFIX}${TABLE} "
    REMOTE_IGNORED_DB_TABLES_STRING+="--ignore-table=${REMOTE_DB_NAME}.${GLOBAL_DB_TABLE_PREFIX}${TABLE} "
-   STAGING_IGNORED_DB_TABLES_STRING+="--ignore-table=${STAGING_DB_NAME}.${GLOBAL_DB_TABLE_PREFIX}${TABLE} "
 done
 
 # Additional arguments for mysqldump
@@ -33,7 +31,6 @@ MYSQLDUMP_ADDITIONAL_ARGS+="--no-autocommit "
 MYSQLDUMP_ADDITIONAL_ARGS+="--routines "
 MYSQLDUMP_ADDITIONAL_ARGS+="--set-charset "
 MYSQLDUMP_ADDITIONAL_ARGS+="--triggers "
-MYSQLDUMP_ADDITIONAL_ARGS+="--set-gtid-purged=OFF "
 
 # Arguments to dump just the schema
 MYSQLDUMP_SCHEMA_ARGS=""
@@ -65,26 +62,6 @@ if [[ -n "${REMOTE_DB_LOGIN_PATH}" ]] ; then
     REMOTE_DB_CREDS="--login-path=${REMOTE_DB_LOGIN_PATH} "
 fi
 REMOTE_DB_CREDS+="${REMOTE_DB_NAME}"
-
-# Build the staging mysql credentials
-STAGING_DB_CREDS=""
-if [[ -n "${STAGING_DB_USER}" ]] ; then
-    STAGING_DB_CREDS+="--user=${STAGING_DB_USER} "
-fi
-if [[ -n "${STAGING_DB_PASSWORD}" ]] ; then
-    STAGING_DB_CREDS+="--password=${STAGING_DB_PASSWORD} "
-fi
-if [[ -n "${STAGING_DB_HOST}" ]] ; then
-    STAGING_DB_CREDS+="--host=${STAGING_DB_HOST} "
-fi
-if [[ -n "${STAGING_DB_PORT}" ]] ; then
-    STAGING_DB_CREDS+="--port=${STAGING_DB_PORT} "
-fi
-# Use login-path if they have it set instead
-if [[ -n "${STAGING_DB_LOGIN_PATH}" ]] ; then
-    STAGING_DB_CREDS="--login-path=${STAGING_DB_LOGIN_PATH} "
-fi
-STAGING_DB_CREDS+="${STAGING_DB_NAME}"
 
 # Build the local mysql credentials
 LOCAL_DB_CREDS=""

@@ -20,6 +20,9 @@ GLOBAL_DB_TABLE_PREFIX=""
 # The path of the `craft` folder, relative to the root path; paths should always have a trailing /
 GLOBAL_CRAFT_PATH="./"
 
+# The maximum age of db backups in days; backups older than this will be automatically removed
+GLOBAL_DB_BACKUPS_MAX_AGE=90
+
 # The database driver for this Craft install ('mysql' or 'pgsql')
 GLOBAL_DB_DRIVER="mysql"
 
@@ -50,6 +53,21 @@ LOCAL_CRAFT_FILE_DIRS=(
                 "rebrand"
                 )
 
+# Absolute paths to directories to back up, in addition to `LOCAL_ASSETS_DIRS` and `LOCAL_CRAFT_FILE_DIRS`
+LOCAL_DIRS_TO_BACKUP=(
+                )
+
+# Local FastCGI Cache path; leave it empty ("") if you're not using FastCGI Cache; paths should always have a trailing /
+# The `clear_caches.sh` script will delete everything in this directory when it is executed (say, on deploy)
+LOCAL_FASTCGI_CACHE_DIR=""
+
+# Local Redis database ID; leave it empty ("") if you're not using Redis. The `clear_caches.sh` script will purge
+# this Redis database when it is executed (say, on deploy)
+LOCAL_REDIS_DB_ID=""
+
+# Local Redis password; leave it empty ("") if no password is required. You'll probably only need this if you've set a
+# password for Redis yourself. It's disabled by default on Redis installations.
+LOCAL_REDIS_PASSWORD=""
 
 # Local database constants; default port for mysql is 3306, default port for postgres is 5432
 # This pulls values from your local .env file
@@ -60,20 +78,32 @@ LOCAL_DB_HOST=$(grep DB_SERVER .env | cut -d '"' -f2)
 LOCAL_DB_PORT=$(grep DB_PORT .env | cut -d '"' -f2)
 LOCAL_DB_SCHEMA=$(grep DB_SCHEMA .env | cut -d '"' -f2)
 
+# If you are using mysql 5.6.10 or later and you have `login-path` setup as per:
+# https://opensourcedbms.com/dbms/passwordless-authentication-using-mysql_config_editor-with-mysql-5-6/
+# you can use it instead of the above LOCAL_DB_* constants; otherwise leave this blank
+LOCAL_DB_LOGIN_PATH=""
+
 # The `mysql` and `mysqldump` commands to run locally
 LOCAL_MYSQL_CMD="mysql"
 # MAMP users: /Applications/MAMP/library/bin/mysql
 LOCAL_MYSQLDUMP_CMD="mysqldump"
 # MAMP users: /Applications/MAMP/library/bin/mysqldump
 
+# The `psql` and `pg_dump` commands to run locally
+LOCAL_PSQL_CMD="psql"
+LOCAL_PG_DUMP_CMD="pg_dump"
+
 # Local backups path; paths should always have a trailing /
 LOCAL_BACKUPS_PATH=${LOCAL_ROOT_PATH}"backups/"
 
-# -- REMOTE (Production) settings --
+# -- REMOTE settings --
 
 # Remote ssh credentials, user@domain.com and Remote SSH Port
 REMOTE_SSH_LOGIN="REPLACE_ME"
 REMOTE_SSH_PORT="22"
+
+# Should we connect to the remote database server via ssh?
+REMOTE_DB_USING_SSH="yes"
 
 # Remote path constants; paths should always have a trailing /
 REMOTE_ROOT_PATH="REPLACE_ME"
@@ -87,26 +117,24 @@ REMOTE_DB_HOST="localhost"
 REMOTE_DB_PORT="3306"
 REMOTE_DB_SCHEMA="public"
 
+# If you are using mysql 5.6.10 or later and you have `login-path` setup as per:
+# https://opensourcedbms.com/dbms/passwordless-authentication-using-mysql_config_editor-with-mysql-5-6/
+# you can use it instead of the above REMOTE_DB_* constants; otherwise leave this blank
+REMOTE_DB_LOGIN_PATH=""
+
+# The `mysql` and `mysqldump` commands to run remotely
+REMOTE_MYSQL_CMD="mysql"
+REMOTE_MYSQLDUMP_CMD="mysqldump"
+
+# The `psql` and `pg_dump` commands to run remotely
+REMOTE_PSQL_CMD="psql"
+REMOTE_PG_DUMP_CMD="pg_dump"
+
 # Remote backups path; paths should always have a trailing /
 REMOTE_BACKUPS_PATH=${REMOTE_ROOT_PATH}"backups/"
 
-# -- STAGING settings --
+# Remote Amazon S3 bucket name
+REMOTE_S3_BUCKET="REPLACE_ME"
 
-# Staging ssh credentials, user@domain.com and Staging SSH Port
-STAGING_SSH_LOGIN="REPLACE_ME"
-STAGING_SSH_PORT="22"
-
-# Remote path constants; paths should always have a trailing /
-STAGING_ROOT_PATH="REPLACE_ME"
-STAGING_ASSETS_PATH=${STAGING_ROOT_PATH}"public/uploads/"
-
-# Remote database constants; default port for mysql is 3306, default port for postgres is 5432
-STAGING_DB_NAME="REPLACE_ME"
-STAGING_DB_PASSWORD="REPLACE_ME"
-STAGING_DB_USER="REPLACE_ME"
-STAGING_DB_HOST="localhost"
-STAGING_DB_PORT="3306"
-STAGING_DB_SCHEMA="public"
-
-# Remote backups path; paths should always have a trailing /
-STAGING_BACKUPS_PATH=${STAGING_ROOT_PATH}"backups/"
+# Optional subfolder relative to the S3 bucket root; paths should always have a trailing /
+REMOTE_S3_PATH=""

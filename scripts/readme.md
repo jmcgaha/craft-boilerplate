@@ -27,9 +27,19 @@ See [Hardening Craft CMS Permissions](https://nystudio107.com/blog/hardening-cra
 
 Note: if you use `git`, please see the [**Permissions and Git**](#permissions-and-git) section below.
 
-### pull_db.sh
+### clear_caches.sh
 
-**NOTE:** This file is altered this file to have one for each environment: Production, Staging
+The `clear_caches.sh` script clears the Craft CMS caches by removing all of the `craft/storage/runtime/` cache dirs, as well as emptying the `craft_templatecaches` db table.
+
+It can also clear Redis db caches if `LOCAL_REDIS_DB_ID` is set, and it can clear FastCGI Cache if `LOCAL_FASTCGI_CACHE_DIR` is set.
+
+If you want to add this to your Forge / DeployBot / Buddy.works deploy script so that caches are auto-cleared on deploy, set up the `.env.sh` on your remote server(s) and then add this to your deploy script:
+
+    scripts/clear_caches.sh
+
+The above assumes that the current working directory is the project root already.
+
+### pull_db.sh
 
 The `pull_db.sh` script pulls down a database dump from a remote server, and then dumps it into your local database. It backs up your local database before doing the dump.
 
@@ -40,8 +50,6 @@ See [Database & Asset Syncing Between Environments in Craft CMS](https://nystudi
 **N.B.:** The `pull_db.sh` script can be used even if the local and remote are on the same server.
 
 ### pull_assets.sh
-
-**NOTE:** This file is altered this file to have one for each environment: Production, Staging
 
 The `pull_assets.sh` script pulls down an arbitrary number of asset directories from a remote server, since we keep client-uploadable assets out of the git repo. The directories it will pull down are specified in `LOCAL_ASSETS_DIRS`
 
@@ -63,6 +71,19 @@ Because `rsync` is used for these backups, you can put a `.rsync-filter` in any 
 
 See [Mitigating Disaster via Website Backups](https://nystudio107.com/blog/mitigating-disaster-via-website-backups) for a detailed writeup.
 
+### sync_backups_to_s3.sh
+
+The `sync_backups_to_s3.sh` script syncs the backups from `LOCAL_BACKUPS_PATH` to the Amazon S3 bucket specified in `REMOTE_S3_BUCKET`.
+
+If you have defined a optional subfolder, it will contain the backups to the path defined in `REMOTE_S3_PATH`.
+
+This script assumes that you have already [installed awscli](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) and have [configured it](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) with your credentials.
+
+It's recommended that you set up a separate user with access to only S3, and set up a private S3 bucket for your backups.
+
+You can set `LOCAL_AWS_PROFILE` to determine which AWS profile to connect with.
+
+See [Mitigating Disaster via Website Backups](https://nystudio107.com/blog/mitigating-disaster-via-website-backups) for a detailed writeup.
 
 ### backup_db.sh
 
@@ -95,11 +116,47 @@ See the [**Automated Script Execution**](#automatic-script-execution) section be
 
 See [Mitigating Disaster via Website Backups](https://nystudio107.com/blog/mitigating-disaster-via-website-backups) for a detailed writeup.
 
+### backup_dirs.sh
+
+The `backup_dirs.sh` script backs up an arbitrary number of directories to the directory specified in `LOCAL_BACKUPS_PATH`. The directories it backs are up specified in `LOCAL_DIRS_TO_BACKUP`.
+
+This script is provided in case you have other files outside of your project that need backing up. For example, you might have a separate wiki or directory of config files.
+
+Because `rsync` is used for these backups, you can put a `.rsync-filter` in any directory to define files/folders to ignore. [More info](http://serverfault.com/questions/414358/rsync-filter-file-rules-for-subpath)
+
+For example, if you have a wiki with `data/cache` and `data/tmp` directories that you don't want backed up, your `.rsync-filter` file in the wiki directory might look like this:
+
+    # This file allows you to add filter rules to rsync, one per line, preceded by either
+    # `-` or `exclude` and then a pattern to exclude, or `+` or `include` and then a pattern
+    # to include. More info: http://askubuntu.com/questions/291322/how-to-exclude-files-in-rsync
+    - public/data/cache
+    - public/data/tmp
+
+See the [**Automated Script Execution**](#automatic-script-execution) section below for details on how to run this automatically
+
+See [Mitigating Disaster via Website Backups](https://nystudio107.com/blog/mitigating-disaster-via-website-backups) for a detailed writeup.
+
+### restore_db.sh
+
+The `restore_db.sh` restores the local database to the database dumb passed in via command line argument. It backs up your local database before doing the restore.
+
+You can pass in either a path to a `.sql` file or ` .gz` file to `restore_db.sh`, and it will do the right thing based on the file type.
+
+See [Mitigating Disaster via Website Backups](https://nystudio107.com/blog/mitigating-disaster-via-website-backups) for a detailed writeup.
+
+### restore_assets.sh
+
+The `restore_assets.sh` restores the assets from the backup that has been created with `backup_assets.sh`.
+
+### restore_dirs.sh
+
+The `restore_dirs.sh` restores the dirs from the backup that has been created with `backup_dirs.sh`.
+
 ### Setting it up
 
 1. Download or clone the `craft-scripts` git repo
 2. Copy the `scripts` directory into the root directory of your Craft CMS project
-3. In the `scripts` directory, duplicate the `example.env.sh` file, and rename it to `.env.sh`.
+3. In the `scripts` directory, duplicate the `craft2-example.env.sh` (for Craft 2.x projects) or `craft3-example.env.sh` (for Craft 3.x projects) file, and rename it to `.env.sh`. These `*-example.env.sh` files are largely the same, just with some different defaults for Craft 2.x and Craft 3.x.
 4. Add `.env.sh` to your `.gitignore` file
 5. Then open up the `.env.sh` file into your favorite editor, and replace `REPLACE_ME` with the appropriate settings.
 
@@ -162,6 +219,8 @@ All settings that are prefaced with `LOCAL_` refer to the local environment wher
 `LOCAL_DB_LOGIN_PATH` if this is set, it will use `--login-path=` for your local db credentials instead of sending them in via the commandline (see below)
 
 `LOCAL_BACKUPS_PATH` is the absolute path to the directory where local backups should be stored. For database backups, a sub-directory `LOCAL_DB_NAME/db` will be created inside the `LOCAL_BACKUPS_PATH` directory to store the database backups. Paths should always have a trailing `/`
+
+`LOCAL_AWS_PROFILE` is an [AWS named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) you can set to determine which profile to connect to S3 with. 
 
 ##### Using mysql within a local docker container
 
