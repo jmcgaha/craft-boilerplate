@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 function rem(num, base = 16) {
 	let parsedNum = num;
 
@@ -25,20 +27,9 @@ module.exports = {
 			colors: {
 			},
 			fontFamily: {
-				body: [
+				sans: [
 					"Nunito Sans",
-					"-apple-system",
-					"BlinkMacSystemFont",
-					'"Segoe UI"',
-					"Roboto",
-					'"Helvetica Neue"',
-					"Arial",
-					'"Noto Sans"',
-					"sans-serif",
-					'"Apple Color Emoji"',
-					'"Segoe UI Emoji"',
-					'"Segoe UI Symbol"',
-					'"Noto Color Emoji"'
+					...defaultTheme.fontFamily.sans
 				]
 			},
 			maxWidth: theme => ({
