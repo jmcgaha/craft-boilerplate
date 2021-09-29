@@ -59,6 +59,7 @@ Follow these instructions when you need to start a brand new CraftCMS from scrat
 1. MAMP users need to make sure and uncomment a line in the `.env` for `BACKUP_COMMAND`, `RESTORE_COMMAND`, and `DB_SOCKET`
 1. Run `$ ./craft setup` and follow the instructions, which will fill out the rest of the fields in your .env file and set up the database for first-time use.
 1. Run `$ npm install`, which will install all Node dependencies for this project.
+1. Access your control panel at `/admin` and login using the credentials you created during installation. Browse to Settings -> Plugins, and install each of the plugins listed.
 
 # Miscellaneous Information
 ### File/Directory Structure
