@@ -22,3 +22,9 @@ Thumbs.db
 # Locally compiled CSS/JS
 public/assets
 mix-manifest.json
+
+# Locally Only (do not commit)
+config/license.key
+composer.lock
+package-lock.json
+config/project
