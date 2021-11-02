@@ -21,16 +21,16 @@ module.exports = {
 	],
 	theme: {
 		container: {
-			center: true
+			center: true,
 		},
 		extend: {
 			colors: {
 			},
 			fontFamily: {
 				sans: [
-					"Nunito Sans",
+					'Nunito Sans',
 					...defaultTheme.fontFamily.sans
-				]
+				],
 			},
 			maxWidth: theme => ({
 				...theme('spacing'),
@@ -155,7 +155,7 @@ module.exports = {
 				'300': rem(1200), // '75rem',
 				'400': rem(1600), // '100rem'
 			},
-		}
+		},
 	},
 	plugins: [],
 };
