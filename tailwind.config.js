@@ -29,14 +29,14 @@ module.exports = {
 			fontFamily: {
 				sans: [
 					'Nunito Sans',
-					...defaultTheme.fontFamily.sans
+					...defaultTheme.fontFamily.sans,
 				],
 			},
 			maxWidth: theme => ({
 				...theme('spacing'),
 			}),
 			spacing: {
-				px: rem(1), // 1px
+				px: rem(1), // 1px,
 				'-0.5': rem(-2),
 				'0': rem(0),
 				'.5': rem(2), // '0.125rem',
@@ -45,7 +45,7 @@ module.exports = {
 				'1.5': rem(6), // '0.375rem',
 				'1.75': rem(7), // '0.4375rem',
 				'2': rem(8), // '0.5rem',
-				'2.25': rem(9), // '0.5625rem'
+				'2.25': rem(9), // '0.5625rem',
 				'2.5': rem(10), // '0.625rem',
 				'2.75': rem(11), // '0.6875rem',
 				'3': rem(12), // '0.75rem',
@@ -72,7 +72,7 @@ module.exports = {
 				'12.5': rem(50), // '3.125rem',
 				'13': rem(52), // '3.25rem',
 				'13.5': rem(54), // '3.375rem',
-				'14': rem(56), // '3.5rem'
+				'14': rem(56), // '3.5rem',
 				'14.5': rem(58), // '3.625',
 				'15': rem(60), // '3.75rem',
 				'15.5': rem(62), // '3.875rem',
@@ -86,7 +86,7 @@ module.exports = {
 				'19.5': rem(78), // '4.875rem',
 				'20': rem(80), // '5rem',
 				'20.5': rem(82), // '5.125rem',
-				'21': rem(84), // '5.25rem'
+				'21': rem(84), // '5.25rem',
 				'21.5': rem(86), // '5.375rem',
 				'22': rem(88), // '5.5rem',
 				'22.5': rem(90), // '5.625rem',
@@ -120,7 +120,7 @@ module.exports = {
 				'40': rem(160), // '10rem',
 				'41': rem(164), // '10.25rem',
 				'42': rem(168), // '10.5rem',
-				'44': rem(176), // '11rem'
+				'44': rem(176), // '11rem',
 				'45': rem(180), // '11.25rem',
 				'48': rem(192), // '12rem',
 				'49': rem(196), // '12.5',
@@ -153,7 +153,7 @@ module.exports = {
 				'256': rem(1024), // '64rem',
 				'270': rem(1080), // '67.5rem',
 				'300': rem(1200), // '75rem',
-				'400': rem(1600), // '100rem'
+				'400': rem(1600), // '100rem',
 			},
 		},
 	},
