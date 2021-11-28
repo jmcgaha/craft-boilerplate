@@ -20,8 +20,8 @@
 		"favicons": "^6.2.2",
 		"laravel-mix": "^6.0.39",
 		"laravel-mix-versionhash": "^2.0.1",
-		"postcss": "^8.3.11",
-		"sass": "^1.43.4",
+		"postcss": "^8.4.4",
+		"sass": "^1.43.5",
 		"sass-loader": "^12.3.0",
 		"tailwindcss": "^2.2.19"
 	},
