@@ -21,8 +21,8 @@
 		"laravel-mix": "^6.0.39",
 		"laravel-mix-versionhash": "^2.0.1",
 		"postcss": "^8.4.4",
-		"sass": "^1.43.5",
-		"sass-loader": "^12.3.0",
+		"sass": "^1.44.0",
+		"sass-loader": "^12.4.0",
 		"tailwindcss": "^2.2.19"
 	},
 	"browserslist": [
