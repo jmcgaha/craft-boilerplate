@@ -14,8 +14,7 @@ function rem(num, base = 16) {
 }
 
 module.exports = {
-	mode: 'jit',
-	purge: [
+	content: [
 		'./templates/**/*.twig',
 		'./assets/javascript/**/*.js',
 	],
