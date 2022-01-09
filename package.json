@@ -13,7 +13,7 @@
 	},
 	"homepage": "https://github.com/jmcgaha/craft-boilerplate#readme",
 	"dependencies": {
-		"autoprefixer": "^10.4.0",
+		"autoprefixer": "^10.4.2",
 		"browser-sync": "^2.27.7",
 		"browser-sync-webpack-plugin": "^2.3.0",
 		"dotenv": "^10.0.0",
@@ -21,9 +21,9 @@
 		"laravel-mix": "^6.0.39",
 		"laravel-mix-versionhash": "^2.0.1",
 		"postcss": "^8.4.5",
-		"sass": "^1.45.0",
+		"sass": "^1.47.0",
 		"sass-loader": "^12.4.0",
-		"tailwindcss": "^3.0.5"
+		"tailwindcss": "^3.0.12"
 	},
 	"browserslist": [
 		"> 1%",
