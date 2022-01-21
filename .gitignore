@@ -23,8 +23,8 @@ Thumbs.db
 public/assets
 mix-manifest.json
 
-# Locally Only (do not commit)
-config/license.key
-composer.lock
-package-lock.json
-config/project
+# Turn these on to hide files on boilerplate template, but not on actual projects
+# config/license.key
+# composer.lock
+# package-lock.json
+# config/project
