@@ -22,17 +22,11 @@ return [
     // Control panel trigger word
     'cpTrigger' => 'admin',
 
-    // The secure key Craft will use for hashing and encrypting data
-    'securityKey' => App::env('SECURITY_KEY'),
-
     // Whether the GraphQL API is enabled
     'enableGql' => false,
 
     'useEmailAsUsername' => true,
     'generateTransformsBeforePageLoad' => true,
-
-    // Chrome started logging out when switching to responsive mode in devtools
-    'requireMatchingUserAgentForSession' => false,
 
     // By default caches are regenerated daily. This busts cache when content is changed.
     'cacheDuration' => false,
@@ -60,10 +54,6 @@ return [
     'disallowRobots' => true,
 
     'enableTemplateCaching' => false,
-
-    // Use proper MySQL commands for MAMP users only
-    'backupCommand' => App::env('BACKUP_COMMAND'),
-    'restoreCommand' => App::env('RESTORE_COMMAND'),
   ],
 
   // Staging environment settings

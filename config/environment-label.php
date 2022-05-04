@@ -1,10 +1,12 @@
 <?php
 
+use craft\helpers\App;
+
 return [
 
   '*' => [
     'showLabel' => true,
-    'labelText' => strtoupper(CRAFT_ENVIRONMENT),
+    'labelText' => strtoupper(App::env('CRAFT_ENVIRONMENT')),
     'prefixText' => null,
     'suffixText' => null,
     'textColor' => '#fff',
