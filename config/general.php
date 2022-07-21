@@ -39,7 +39,7 @@ return [
 
     'aliases' => [
       '@basePath' => CRAFT_BASE_PATH . '/public/',
-      '@baseUrl' => App::env('DEFAULT_SITE_URL'),
+      '@baseUrl' => App::env('PRIMARY_SITE_URL'),
     ],
 
     'resourceBasePath' => '@basePath/cpresources',

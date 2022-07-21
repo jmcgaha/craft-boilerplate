@@ -17,7 +17,7 @@ mix
 // if (!mix.inProduction()) {
 // 	mix.browserSync({
 // 		// Set this to a variable in your .env file containing your local development URL:
-// 		proxy: process.env.DEFAULT_SITE_URL,
+// 		proxy: process.env.PRIMARY_SITE_URL,
 // 		// Watch for any changes in assets/ and templates/ directories:
 // 		files: ['assets/**/*', 'templates/**/*'],
 // 	});
