@@ -13,7 +13,7 @@
 	},
 	"homepage": "https://github.com/jmcgaha/craft-boilerplate#readme",
 	"dependencies": {
-		"autoprefixer": "^10.4.7",
+		"autoprefixer": "^10.4.8",
 		"browser-sync": "^2.27.10",
 		"browser-sync-webpack-plugin": "^2.3.0",
 		"dotenv": "^16.0.1",
@@ -23,7 +23,7 @@
 		"postcss": "^8.4.14",
 		"sass": "^1.54.0",
 		"sass-loader": "^13.0.2",
-		"tailwindcss": "^3.1.6"
+		"tailwindcss": "^3.1.7"
 	},
 	"engines": {
 		"npm": ">=8.12.0",
