@@ -30,6 +30,9 @@
 		"topshelfcraft/environment-label": "^4.0.2",
 		"vlucas/phpdotenv": "^5.5"
 	},
+	"require-dev": {
+		"yiisoft/yii2-shell": "^2.0.5"
+	},
 	"autoload": {
 		"psr-4": {}
 	},
