@@ -7,7 +7,7 @@
 		"craftcms",
 		"project"
 	],
-	"license": "MIT",
+	"license": "0BSD",
 	"homepage": "https://craftcms.com/",
 	"type": "project",
 	"support": {
@@ -31,6 +31,7 @@
 		"vlucas/phpdotenv": "^5.5"
 	},
 	"require-dev": {
+		"craftcms/generator": "^1.0.4",
 		"yiisoft/yii2-shell": "^2.0.5"
 	},
 	"autoload": {
