@@ -37,6 +37,9 @@ return [
       'subRight' => true,
     ),
 
+    // Preload Single entries as Twig variables
+    'preloadSingles' => true,
+
     'aliases' => [
       '@basePath' => CRAFT_BASE_PATH . '/public/',
       '@baseUrl' => App::env('PRIMARY_SITE_URL'),
