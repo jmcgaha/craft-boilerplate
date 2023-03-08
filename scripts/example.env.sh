@@ -71,12 +71,12 @@ LOCAL_REDIS_PASSWORD=""
 
 # Local database constants; default port for mysql is 3306, default port for postgres is 5432
 # This pulls values from your local .env file
-LOCAL_DB_NAME=$(grep DB_DATABASE .env | cut -d '"' -f2)
-LOCAL_DB_PASSWORD=$(grep DB_PASSWORD .env | cut -d '"' -f2)
-LOCAL_DB_USER=$(grep DB_USER .env | cut -d '"' -f2)
-LOCAL_DB_HOST=$(grep DB_SERVER .env | cut -d '"' -f2)
-LOCAL_DB_PORT=$(grep DB_PORT .env | cut -d '"' -f2)
-LOCAL_DB_SCHEMA=$(grep DB_SCHEMA .env | cut -d '"' -f2)
+LOCAL_DB_NAME=$(grep CRAFT_DB_DATABASE .env | cut -d '"' -f2)
+LOCAL_DB_PASSWORD=$(grep CRAFT_DB_PASSWORD .env | cut -d '"' -f2)
+LOCAL_DB_USER=$(grep CRAFT_DB_USER .env | cut -d '"' -f2)
+LOCAL_DB_HOST=$(grep CRAFT_DB_SERVER .env | cut -d '"' -f2)
+LOCAL_DB_PORT=$(grep CRAFT_DB_PORT .env | cut -d '"' -f2)
+LOCAL_DB_SCHEMA=$(grep CRAFT_DB_SCHEMA .env | cut -d '"' -f2)
 
 # If you are using mysql 5.6.10 or later and you have `login-path` setup as per:
 # https://opensourcedbms.com/dbms/passwordless-authentication-using-mysql_config_editor-with-mysql-5-6/
