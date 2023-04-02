@@ -49,13 +49,6 @@ a {
 
 @tailwind components;
 
-/*! purgecss start ignore */
-
-// @import 'your/stuff';
-// @import 'your/things';
-
 @import 'button';
-
-/*! purgecss end ignore */
 
 @tailwind utilities;
