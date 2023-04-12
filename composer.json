@@ -20,7 +20,7 @@
 	},
 	"require": {
 		"clubstudioltd/craft-asset-rev": "^7.0.0",
-		"craftcms/cms": "^4.4.5",
+		"craftcms/cms": "^4.4.7",
 		"craftcms/redactor": "^3.0.4",
 		"hybridinteractive/craft-position-fieldtype": "^4.0.0",
 		"nystudio107/craft-closure": "^1.0.0",
@@ -45,7 +45,7 @@
 		"sort-packages": true,
 		"optimize-autoloader": true,
 		"platform": {
-			"php": "8.1.7"
+			"php": "8.1.17"
 		}
 	},
 	"scripts": {
