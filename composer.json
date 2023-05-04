@@ -20,14 +20,14 @@
 	},
 	"require": {
 		"clubstudioltd/craft-asset-rev": "^7.0.0",
-		"craftcms/ckeditor": "^3.2.1",
-		"craftcms/cms": "^4.4.8",
+		"craftcms/ckeditor": "^3.3.0",
+		"craftcms/cms": "^4.4.9",
 		"hybridinteractive/craft-position-fieldtype": "^4.0.0",
 		"nystudio107/craft-closure": "^1.0.0",
 		"nystudio107/craft-templatecomments": "^4.0.0",
 		"putyourlightson/craft-blitz-recommendations": "^2.1.1",
 		"sebastianlenz/linkfield": "^2.1.5",
-		"topshelfcraft/environment-label": "^4.0.2",
+		"topshelfcraft/environment-label": "^4.0.3",
 		"vlucas/phpdotenv": "^5.5"
 	},
 	"require-dev": {
