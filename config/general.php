@@ -40,9 +40,13 @@ return [
     // Preload Single entries as Twig variables
     'preloadSingles' => true,
 
+    // Prevent user enumeration attacks
+    'preventUserEnumeration' => true,
+
     'aliases' => [
       '@basePath' => CRAFT_BASE_PATH . '/public/',
       '@baseUrl' => App::env('PRIMARY_SITE_URL'),
+      '@webroot' => dirname(__DIR__) . '/public',
     ],
 
     'resourceBasePath' => '@basePath/cpresources',
