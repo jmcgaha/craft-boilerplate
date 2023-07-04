@@ -26,6 +26,8 @@ module.exports = {
 		},
 		extend: {
 			colors: {
+				current: 'currentColor',
+				transparent: 'transparent',
 			},
 			fontFamily: {
 				sans: [
