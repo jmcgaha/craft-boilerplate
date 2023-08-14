@@ -21,7 +21,7 @@
 	"require": {
 		"clubstudioltd/craft-asset-rev": "^7.0.0",
 		"craftcms/ckeditor": "^3.4.0",
-		"craftcms/cms": "^4.4.16.1",
+		"craftcms/cms": "^4.4.17",
 		"hybridinteractive/craft-position-fieldtype": "^4.0.0",
 		"nystudio107/craft-closure": "^1.0.0",
 		"nystudio107/craft-templatecomments": "^4.0.0",
@@ -33,7 +33,7 @@
 		"vlucas/phpdotenv": "^5.5"
 	},
 	"require-dev": {
-		"craftcms/generator": "^1.5.0",
+		"craftcms/generator": "^1.6.1",
 		"yiisoft/yii2-shell": "^2.0.5"
 	},
 	"autoload": {
