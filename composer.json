@@ -30,7 +30,7 @@
 		"topshelfcraft/environment-label": "^4.0.3",
 		"trendyminds/craft-design-tokens": "^1.1.1",
 		"trendyminds/craft-spacing": "^1.0.1",
-		"vlucas/phpdotenv": "^5.5"
+		"vlucas/phpdotenv": "^5.6"
 	},
 	"require-dev": {
 		"craftcms/generator": "^1.6.1",
@@ -47,7 +47,7 @@
 		"sort-packages": true,
 		"optimize-autoloader": true,
 		"platform": {
-			"php": "8.1.17"
+			"php": "8.2.12"
 		}
 	},
 	"scripts": {
