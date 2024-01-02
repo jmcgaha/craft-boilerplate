@@ -38,15 +38,6 @@ module.exports = {
 			maxHeight: (theme) => ({
 				...theme('spacing'),
 			}),
-			maxWidth: (theme) => ({
-				...theme('spacing'),
-			}),
-			minHeight: (theme) => ({
-				...theme('spacing'),
-			}),
-			minWidth: (theme) => ({
-				...theme('spacing'),
-			}),
 			spacing: {
 				px: rem(1), // 1px,
 				'-0.5': rem(-2),
