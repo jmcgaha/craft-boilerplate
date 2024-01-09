@@ -21,7 +21,7 @@
 	"require": {
 		"clubstudioltd/craft-asset-rev": "^7.0.0",
 		"craftcms/ckeditor": "^3.6.0",
-		"craftcms/cms": "^4.5.14",
+		"craftcms/cms": "^4.6.0",
 		"hybridinteractive/craft-position-fieldtype": "^4.0.0",
 		"nystudio107/craft-closure": "^1.0.0",
 		"nystudio107/craft-templatecomments": "^4.0.0",
