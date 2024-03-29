@@ -22,11 +22,11 @@
 		"postcss": "^8.4.38",
 		"sass": "^1.72.0",
 		"sass-loader": "^14.1.1",
-		"tailwindcss": "^3.4.1"
+		"tailwindcss": "^3.4.3"
 	},
 	"devDependencies": {
 		"prettier": "^3.2.5",
-		"prettier-plugin-tailwindcss": "^0.5.12",
+		"prettier-plugin-tailwindcss": "^0.5.13",
 		"prettier-plugin-twig-melody": "^0.4.6"
 	},
 	"engines": {

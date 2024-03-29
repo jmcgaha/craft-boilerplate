@@ -1,5 +1,5 @@
 # Craft Boilerplate
-This project is based on the official [Craft 3 starter project](https://github.com/craftcms/craft/)
+This project is based on the official [Craft starter project](https://github.com/craftcms/craft/)
 
 Table of Contents
 =================
@@ -26,7 +26,7 @@ You can download MAMP [here](https://www.mamp.info/en/downloads/) and find the i
 
 ## Composer Installation
 
-CraftCMS v3 now uses [PHP Composer](https://getcomposer.org/) to manage Craft updates, plugins, and other things related to CraftCMS. While there are [installation instructions](https://getcomposer.org/doc/00-intro.md) for various operating systems, we have found that the most common setup (i.e. MacOSX and Ubuntu Linux) can be installed by doing the following:
+CraftCMS uses [PHP Composer](https://getcomposer.org/) to manage Craft updates, plugins, and other things related to CraftCMS. While there are [installation instructions](https://getcomposer.org/doc/00-intro.md) for various operating systems, we have found that the most common setup (i.e. MacOSX and Ubuntu Linux) can be installed by doing the following:
 
 1. Ensure that you have PHP installed
 1. Download and save the Composer installer here: https://getcomposer.org/installer
@@ -39,7 +39,7 @@ If all goes well and you were able to install Composer globally, then this is th
 
 ## Node installation
 
-CraftCMS v3 projects based on `craft-boilerplate` utilize `nodejs`, `npm`, and `laravel mix`, in order to run SASS processing, javascript minifcation, and autoprefixing.
+CraftCMS projects based on `craft-boilerplate` utilize `nodejs`, `npm`, and `laravel mix`, in order to run SASS processing, javascript minifcation, and autoprefixing.
 
 Find out how to download and install `node` for your environment here (which includes `npm`): https://nodejs.org/en/download/
 
@@ -94,7 +94,7 @@ This CraftCMS project expects certain files to be in specific locations in order
 * [package.json](package.json) - npm packages configuration file
 * [package-lock.json](package-lock.json) - npm packages information lock file
 
-More detailed information about the default structure can be found here: https://docs.craftcms.com/v3/directory-structure.html
+More detailed information about the default structure can be found here: https://craftcms.com/docs/5.x/system/directory-structure.html
 
 ### .env
  - Database and environment name are set in the .env file when you craft setup
@@ -128,24 +128,24 @@ More detailed information about the default structure can be found here: https:/
 
 [Craft](https://craftcms.com/) is a flexible, user-friendly CMS for creating custom digital experiences on the web and beyond.
 
-In technical terms, it’s a self-hosted PHP 8 application backed by a MySQL or Postgres database. Read more in the [official documentation](https://craftcms.com/docs).
+In technical terms, it’s a self-hosted PHP application backed by a MySQL or Postgres database. Read more in the [official documentation](https://craftcms.com/docs).
 
 __Psst!__ Looking for the Craft source code? Need to file a bug report or feature request? Check out [`craftcms/cms`](https://github.com/craftcms/cms).
 
 ---
 
-:postal_horn: **If you just heard about Craft:** Take a feature tour on [our website](https://craftcms.com/features)—then spin up a [demo project](https://craftcms.com/demo) to try them out for yourself.
+:postal_horn: **If you just heard about Craft:** Take a feature tour on [our website](https://craftcms.com/features)—then spin up a [demo project](https://craftcms.com/demo) to try it out for yourself.
 
 :construction_worker_woman: **If you are eager to start building:** You’re in exactly the right place!
 
 ## Getting Started
 
-This repository is a bare-bones [Composer](https://getcomposer.org/) “project,” intended for use with the `composer create-project` command. It contains only the folders and files absolutely required to run Craft.
+This repository is a bare-bones [Composer](https://getcomposer.org/) “project”, intended for use with the `composer create-project` command. It contains only the folders and files absolutely required to run Craft.
 
-> **Note**
+> [!TIP]  
 > Our [tutorial](https://craftcms.com/docs/getting-started-tutorial/) covers this setup process in greater depth. If you get stuck, give it a once-over; if things still aren’t clicking, help is never far away in [our community](https://craftcms.com/community) or via [official support](https://craftcms.com/support-services).
 >
-> You can also find these instructions (and some other helpful tips) in [the documentation](https://craftcms.com/docs/4.x/installation.html).
+> You can also find these instructions (and some other helpful tips) in [the documentation](https://craftcms.com/docs/5.x/install.html).
 
 The best way to spin up your first project is with [DDEV](https://ddev.com/), a cross-platform, Docker-based PHP development environment.
 
@@ -158,20 +158,20 @@ The best way to spin up your first project is with [DDEV](https://ddev.com/), a 
     ```
 3. Configure a new DDEV [project](https://ddev.readthedocs.io/en/latest/users/quickstart/#craft-cms), and install Craft:
     ```bash
-    ddev config --project-type=craftcms --docroot=web --create-docroot
+    ddev config --project-type=craftcms --docroot=web --create-docroot --php-version=8.2
 
     # Use this package as a starting point:
-    ddev composer create -y --no-scripts craftcms/craft
+    ddev composer create -y --no-scripts craftcms/craft=^5.0.0
 
     # Run the Craft CMS installer (use all defaults):
     ddev craft install
     ```
 4. Run `ddev launch` to open the project in your browser.
 
-Craft’s [control panel](https://craftcms.com/docs/4.x/control-panel.html) is located at `/admin`. The rest is up to you! Pick up where we left off in [the tutorial](https://craftcms.com/docs/getting-started-tutorial/configure/control-panel.html), or dive right in on modeling your own content:
-- :card_file_box: [Elements](https://craftcms.com/docs/4.x/elements.html): Learn about Craft’s core content types, and how to customize them.
-- :triangular_ruler: [Fields](https://craftcms.com/docs/4.x/fields.html): Create precisely the data structure and authoring experience you need.
-- :pencil2: [Templating](https://craftcms.com/docs/4.x/dev/twig-primer.html): Start using your data in a totally custom front-end.
+Craft’s [control panel](https://craftcms.com/docs/5.x/system/control-panel.html) is located at `/admin`. The rest is up to you! Pick up where we left off in [the tutorial](https://craftcms.com/docs/getting-started-tutorial/install/control-panel.html), or dive right in on modeling your own content:
+- :card_file_box: [Elements](https://craftcms.com/docs/5.x/system/elements.html): Learn about Craft’s core content types, and how to customize them.
+- :triangular_ruler: [Fields](https://craftcms.com/docs/5.x/system/fields.html): Create precisely the data structure and authoring experience you need.
+- :pencil2: [Templating](https://craftcms.com/docs/5.x/development/twig.html): Start using your data in a totally custom front-end.
 
 ## Resources
 
