@@ -21,8 +21,8 @@
 	"require": {
 		"clubstudioltd/craft-asset-rev": "^8.0.0",
 		"craftcms/ckeditor": "^4.0.3",
-		"craftcms/cms": "^5.0.0",
-		"nystudio107/craft-closure": "^1.0.3",
+		"craftcms/cms": "^5.0.4",
+		"nystudio107/craft-closure": "^1.0.4",
 		"vlucas/phpdotenv": "^5.6.0"
 	},
 	"require-dev": {
