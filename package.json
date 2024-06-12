@@ -20,13 +20,13 @@
 		"laravel-mix": "^6.0.49",
 		"laravel-mix-versionhash": "^2.0.1",
 		"postcss": "^8.4.38",
-		"sass": "^1.77.2",
+		"sass": "^1.77.5",
 		"sass-loader": "^14.2.1",
-		"tailwindcss": "^3.4.3"
+		"tailwindcss": "^3.4.4"
 	},
 	"devDependencies": {
-		"prettier": "^3.2.5",
-		"prettier-plugin-tailwindcss": "^0.5.14",
+		"prettier": "^3.3.2",
+		"prettier-plugin-tailwindcss": "^0.6.3",
 		"prettier-plugin-twig-melody": "^0.4.6"
 	},
 	"engines": {

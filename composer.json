@@ -20,8 +20,8 @@
 	},
 	"require": {
 		"clubstudioltd/craft-asset-rev": "^8.0.0",
-		"craftcms/ckeditor": "^4.0.6",
-		"craftcms/cms": "^5.1.7",
+		"craftcms/ckeditor": "^4.1.0",
+		"craftcms/cms": "^5.2.0",
 		"nystudio107/craft-closure": "^1.0.5",
 		"nystudio107/craft-templatecomments": "^5.0.0",
 		"topshelfcraft/environment-label": "^5.0.0",
