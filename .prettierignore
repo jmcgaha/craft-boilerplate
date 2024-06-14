@@ -1,0 +1,11 @@
+# COMPOSER
+/vendor
+
+# CRAFT STORAGE
+/storage/*
+
+# Document root
+/public/*
+
+# BUILD FILES
+/node_modules/*
