@@ -46,20 +46,18 @@
 		}
 	},
 	"scripts": {
+		"craft-update": [
+			"@php craft install/check && php craft clear-caches/all --interactive=0 || exit 0",
+			"@php craft install/check && php craft up --interactive=0 || exit 0"
+		],
+		"post-install-cmd": ["@craft-update"],
+		"post-update-cmd": ["@craft-update"],
 		"post-root-package-install": [
 			"@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
 			"@php -r \"file_exists('scripts/.env.sh') || copy('scripts/example.env.sh', 'scripts/.env.sh');\""
 		],
 		"post-create-project-cmd": [
 			"@php craft setup/welcome"
-		],
-		"post-update-cmd": [
-			"@php craft up",
-			"@php craft clear-caches/all"
-		],
-		"post-install-cmd": [
-			"@php craft up",
-			"@php craft clear-caches/all"
 		]
 	},
 	"minimum-stability": "dev",
