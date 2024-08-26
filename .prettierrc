@@ -2,6 +2,7 @@
 	"useTabs": true,
 	"tabWidth": 2,
 	"semi": false,
+	"singleAttributePerLine": false,
 	"singleQuote": true,
 	"twigSingleQuote": true,
 
