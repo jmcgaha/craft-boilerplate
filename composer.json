@@ -21,7 +21,7 @@
 	"require": {
 		"clubstudioltd/craft-asset-rev": "^8.0.0",
 		"craftcms/ckeditor": "^4.2.0",
-		"craftcms/cms": "^5.3.6",
+		"craftcms/cms": "^5.4.0",
 		"nystudio107/craft-closure": "^1.0.6",
 		"nystudio107/craft-templatecomments": "^5.0.1",
 		"topshelfcraft/environment-label": "^5.0.0",
@@ -32,9 +32,6 @@
 		"craftcms/phpstan": "dev-main",
 		"craftcms/rector": "dev-main",
 		"yiisoft/yii2-shell": "^2.0.5"
-	},
-	"autoload": {
-		"psr-4": {}
 	},
 	"config": {
 		"allow-plugins": {
