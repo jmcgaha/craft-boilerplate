@@ -20,10 +20,9 @@
 	},
 	"require": {
 		"clubstudioltd/craft-asset-rev": "^8.0.0",
-		"craftcms/ckeditor": "^4.2.0",
-		"craftcms/cms": "^5.4.6",
-		"nystudio107/craft-closure": "^1.0.6",
-		"nystudio107/craft-templatecomments": "^5.0.3",
+		"craftcms/ckeditor": "^4.4.0",
+		"craftcms/cms": "^5.5.7",
+		"nystudio107/craft-templatecomments": "^5.0.4",
 		"topshelfcraft/environment-label": "^5.0.0",
 		"vlucas/phpdotenv": "^5.6.1"
 	},
@@ -49,8 +48,12 @@
 			"@php craft install/check && php craft clear-caches/all --interactive=0 || exit 0",
 			"@php craft install/check && php craft up --interactive=0 || exit 0"
 		],
-		"post-install-cmd": ["@craft-update"],
-		"post-update-cmd": ["@craft-update"],
+		"post-install-cmd": [
+			"@craft-update"
+		],
+		"post-update-cmd": [
+			"@craft-update"
+		],
 		"post-root-package-install": [
 			"@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
 			"@php -r \"file_exists('scripts/.env.sh') || copy('scripts/example.env.sh', 'scripts/.env.sh');\""
