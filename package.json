@@ -19,16 +19,16 @@
 		"favicons": "^7.2.0",
 		"laravel-mix": "^6.0.49",
 		"laravel-mix-versionhash": "^2.0.1",
-		"postcss": "^8.4.49",
-		"sass": "^1.83.0",
+		"postcss": "^8.5.1",
+		"sass": "^1.83.4",
 		"sass-loader": "^16.0.4",
 		"tailwindcss": "^3.4.17"
 	},
 	"devDependencies": {
-		"@prettier/plugin-php": "^0.22.2",
-		"@zackad/prettier-plugin-twig": "^0.14.0",
+		"@prettier/plugin-php": "^0.22.4",
+		"@zackad/prettier-plugin-twig": "^0.14.1",
 		"prettier": "^3.4.2",
-		"prettier-plugin-tailwindcss": "^0.6.9"
+		"prettier-plugin-tailwindcss": "^0.6.10"
 	},
 	"engines": {
 		"npm": ">=8.12.0",
