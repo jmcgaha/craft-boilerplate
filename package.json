@@ -28,7 +28,7 @@
 		"@prettier/plugin-php": "^0.22.4",
 		"@zackad/prettier-plugin-twig": "^0.14.1",
 		"prettier": "^3.4.2",
-		"prettier-plugin-tailwindcss": "^0.6.10"
+		"prettier-plugin-tailwindcss": "^0.6.11"
 	},
 	"engines": {
 		"npm": ">=8.12.0",
