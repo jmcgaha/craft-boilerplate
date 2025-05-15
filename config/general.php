@@ -6,6 +6,7 @@
  * list of the available settings in vendor/craftcms/cms/src/config/GeneralConfig.php.
  *
  * @see \craft\config\GeneralConfig
+ * @link https://craftcms.com/docs/5.x/reference/config/general.html
  */
 
 use craft\helpers\App;

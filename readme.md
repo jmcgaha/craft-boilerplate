@@ -134,7 +134,7 @@ More detailed information about the default structure can be found here: https:/
 
 In technical terms, it’s a self-hosted PHP application backed by a MySQL or Postgres database. Read more in the [official documentation](https://craftcms.com/docs).
 
-**Psst!** Looking for the Craft source code? Need to file a bug report or feature request? Check out [`craftcms/cms`](https://github.com/craftcms/cms).
+__Psst!__ Looking for the Craft source code? Need to file a bug report or feature request? Check out [`craftcms/cms`](https://github.com/craftcms/cms).
 
 ---
 
@@ -153,29 +153,25 @@ This repository is a bare-bones [Composer](https://getcomposer.org/) “project�
 
 The best way to spin up your first project is with [DDEV](https://ddev.com/), a cross-platform, Docker-based PHP development environment.
 
-1. [Install DDEV](https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/)
-2. Choose a folder for your project and move into it:
+[Install or update DDEV](https://ddev.readthedocs.io/en/stable/users/install/), then follow these steps:
+1. Create a project directory and move into it:
+    ```bash
+    cd /path/to/web/projects
+    mkdir my-project
+    cd my-project
+    ```
+2. Create DDEV configuration files:
+    ```bash
+    ddev config --project-type=craftcms --docroot=web
+    ```
+3. Scaffold the project from the official starter project:
    ```bash
-   cd /path/to/web/projects
-   mkdir my-project
-   cd my-project
-   ```
-3. Configure a new DDEV [project](https://ddev.readthedocs.io/en/latest/users/quickstart/#craft-cms), and install Craft:
-
-   ```bash
-   ddev config --project-type=craftcms --docroot=web
-
-   # Use this package as a starting point:
-   ddev composer create -y --no-scripts craftcms/craft=^5.0.0
-
-   # Run the Craft CMS installer (use all defaults):
-   ddev craft install
+   ddev composer create -y "craftcms/craft"
    ```
 
-4. Run `ddev launch` to open the project in your browser.
+The setup wizard will start automatically! Accept all defaults (in `[square brackets]`), and note your chosen username and password.
 
-Craft’s [control panel](https://craftcms.com/docs/5.x/system/control-panel.html) is located at `/admin`. The rest is up to you! Pick up where we left off in [the tutorial](https://craftcms.com/docs/getting-started-tutorial/install/control-panel.html), or dive right in on modeling your own content:
-
+Lauch Craft’s [control panel](https://craftcms.com/docs/5.x/system/control-panel.html) in a browser with `ddev launch admin`. The rest is up to you! Pick up where we left off in [the tutorial](https://craftcms.com/docs/getting-started-tutorial/install/control-panel.html), or dive right in on modeling your own content:
 - :card_file_box: [Elements](https://craftcms.com/docs/5.x/system/elements.html): Learn about Craft’s core content types, and how to customize them.
 - :triangular_ruler: [Fields](https://craftcms.com/docs/5.x/system/fields.html): Create precisely the data structure and authoring experience you need.
 - :pencil2: [Templating](https://craftcms.com/docs/5.x/development/twig.html): Start using your data in a totally custom front-end.
