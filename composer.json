@@ -45,7 +45,7 @@
 	},
 	"scripts": {
 		"craft-update": [
-			"@php craft install/check && php craft clear-caches/all --interactive=0 || exit 0",
+			"@php craft install/check && php craft clear-caches/compiled-templates --interactive=0 && php craft clear-caches/compiled-classes --interactive=0 && php craft clear-caches/cp-resources --interactive=0 && php craft clear-caches/data --interactive=0 || exit 0",
 			"@php craft install/check && php craft up --interactive=0 || exit 0"
 		],
 		"post-install-cmd": [
