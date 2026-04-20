@@ -84,10 +84,8 @@ LOCAL_DB_SCHEMA=$(grep CRAFT_DB_SCHEMA .env | cut -d '"' -f2)
 LOCAL_DB_LOGIN_PATH=""
 
 # The `mysql` and `mysqldump` commands to run locally
-LOCAL_MYSQL_CMD="mysql"
-# MAMP users: /Applications/MAMP/library/bin/mysql
+LOCAL_MYSQL_CMD="mysql --socket /tmp/mysql_3306.sock"
 LOCAL_MYSQLDUMP_CMD="mysqldump"
-# MAMP users: /Applications/MAMP/library/bin/mysqldump
 
 # The `psql` and `pg_dump` commands to run locally
 LOCAL_PSQL_CMD="psql"

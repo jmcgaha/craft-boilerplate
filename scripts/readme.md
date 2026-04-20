@@ -1,4 +1,5 @@
 # craft-scripts
+
 Shell scripts to manage database backups, asset backups, file permissions, asset syncing, cache clearing, and database syncing between Craft CMS environments
 
 ## Overview
@@ -8,10 +9,11 @@ There are several scripts included in `craft-scripts`, each of which perform dif
 Craft-Scripts works with both Craft 2.x & Craft 3.x, and has built-in support for both `mysql` as well as `postgres` databases.
 
 ## Installation
-* Copy the scripts folder into the root directory of your Craft CMS project
-* Duplicate the example.env.sh file, and rename it to .env.sh
-* Add .env.sh to your .gitignore file
-* Then open up the .env.sh file into your favorite editor, and replace REPLACE_ME with the appropriate settings.
+
+- Copy the scripts folder into the root directory of your Craft CMS project
+- Duplicate the example.env.sh file, and rename it to .env.sh
+- Add .env.sh to your .gitignore file
+- Then open up the .env.sh file into your favorite editor, and replace REPLACE_ME with the appropriate settings.
 
 ## Upgrading
 
@@ -156,7 +158,7 @@ The `restore_dirs.sh` restores the dirs from the backup that has been created wi
 
 1. Download or clone the `craft-scripts` git repo
 2. Copy the `scripts` directory into the root directory of your Craft CMS project
-3. In the `scripts` directory, duplicate the `craft2-example.env.sh` (for Craft 2.x projects) or `craft3-example.env.sh` (for Craft 3.x projects) file, and rename it to `.env.sh`. These `*-example.env.sh` files are largely the same, just with some different defaults for Craft 2.x and Craft 3.x.
+3. In the `scripts` directory, duplicate the `example.env.sh` file, and rename it to `.env.sh`.
 4. Add `.env.sh` to your `.gitignore` file
 5. Then open up the `.env.sh` file into your favorite editor, and replace `REPLACE_ME` with the appropriate settings.
 
@@ -220,7 +222,7 @@ All settings that are prefaced with `LOCAL_` refer to the local environment wher
 
 `LOCAL_BACKUPS_PATH` is the absolute path to the directory where local backups should be stored. For database backups, a sub-directory `LOCAL_DB_NAME/db` will be created inside the `LOCAL_BACKUPS_PATH` directory to store the database backups. Paths should always have a trailing `/`
 
-`LOCAL_AWS_PROFILE` is an [AWS named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) you can set to determine which profile to connect to S3 with. 
+`LOCAL_AWS_PROFILE` is an [AWS named profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) you can set to determine which profile to connect to S3 with.
 
 ##### Using mysql within a local docker container
 
