@@ -22,7 +22,7 @@
 		"boccdotdev/polymedia": "^1.2.1",
 		"clubstudioltd/craft-asset-rev": "^8.0.0",
 		"craftcms/ckeditor": "^5.6.1",
-		"craftcms/cms": "^5.10.4.1",
+		"craftcms/cms": "^5.10.5",
 		"jainilnagar/env-beacon": "^1.0.0",
 		"nystudio107/craft-templatecomments": "^5.0.6",
 		"vlucas/phpdotenv": "^5.6.3"

@@ -27,7 +27,7 @@
 	"devDependencies": {
 		"@prettier/plugin-php": "^0.25.0",
 		"@zackad/prettier-plugin-twig": "^0.17.0",
-		"prettier": "^3.8.3",
+		"prettier": "^3.8.4",
 		"prettier-plugin-tailwindcss": "^0.8.0"
 	},
 	"overrides": {
