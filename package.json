@@ -1,7 +1,7 @@
 {
 	"name": "craft-boilerplate",
 	"version": "1.0.0",
-	"description": "This project is based on the official [Craft 3 starter project](https://github.com/craftcms/craft/)",
+	"description": "This project is based on the official [Craft 5 starter project](https://github.com/craftcms/craft/)",
 	"main": "webpack.mix.js",
 	"repository": {
 		"type": "git",
@@ -14,8 +14,9 @@
 	"homepage": "https://github.com/jmcgaha/craft-boilerplate#readme",
 	"dependencies": {
 		"@tailwindcss/forms": "^0.5.11",
+		"@tailwindcss/postcss": "^4.3.1",
 		"@tailwindcss/typography": "^0.5.20",
-		"@tailwindcss/vite": "^4.3.0",
+		"@tailwindcss/vite": "^4.3.1",
 		"dotenv": "^17.4.2",
 		"favicons": "^7.3.0",
 		"tailwindcss": "^4.3.0"
