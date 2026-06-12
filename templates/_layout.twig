@@ -16,10 +16,10 @@
 
 {% block content %}{% endblock %}
 
-<script src="{{ rev('/assets/manifest.js') }}"></script>
-{# If no 3rd-party JS libraries are being imported, vendor.js may not exist in production builds. Delete the following line if that's the case #}
-<script src="{{ rev('/assets/vendor.js') }}"></script>
-<script src="{{ rev('/assets/app.js') }}"></script>
+{# Adds JS and CSS processed with Vite #}
+{# ? https://nystudio107.com/docs/vite/#the-script-function #}
+{# The false argument here disables async CSS to prevent FOUT #}
+{{ craft.vite.script('src/js/app.js', false) }}
 
 </body>
 </html>

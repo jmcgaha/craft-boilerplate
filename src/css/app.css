@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@utility container {
+	margin-inline: auto;
+}
+
+@theme {
+	/* Clear included colors */
+	--color-*: initial;
+
+	/* Base */
+	--color-black: #000;
+	--color-white: #fff;
+	--color-current: currentColor;
+	--color-transparent: transparent;
+
+	/* Typography */
+	--font-body: 'Custom font goes here', var(--font-sans);
+
+	--breakpoint-*: initial;
+	--breakpoint-sx: 420px;
+	--breakpoint-sm: 576px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 992px;
+	--breakpoint-xl: 1200px;
+	--breakpoint-2xl: 1400px;
+	--breakpoint-3xl: 1600px;
+}
+
+@layer base {
+	html {
+		-moz-osx-font-smoothing: grayscale;
+	}
+}

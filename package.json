@@ -13,48 +13,46 @@
 	},
 	"homepage": "https://github.com/jmcgaha/craft-boilerplate#readme",
 	"dependencies": {
-		"autoprefixer": "^10.5.0",
-		"browser-sync": "^3.0.4",
+		"@tailwindcss/forms": "^0.5.11",
+		"@tailwindcss/typography": "^0.5.20",
+		"@tailwindcss/vite": "^4.3.0",
 		"dotenv": "^17.4.2",
 		"favicons": "^7.3.0",
-		"laravel-mix": "^6.0.49",
-		"laravel-mix-versionhash": "^2.0.1",
-		"postcss": "^8.5.15",
-		"sass": "^1.100.0",
-		"sass-loader": "^17.0.0",
-		"tailwindcss": "^3.4.19"
+		"tailwindcss": "^4.3.0"
 	},
 	"devDependencies": {
 		"@prettier/plugin-php": "^0.25.0",
 		"@zackad/prettier-plugin-twig": "^0.17.0",
 		"prettier": "^3.8.4",
-		"prettier-plugin-tailwindcss": "^0.8.0"
+		"prettier-plugin-tailwindcss": "^0.8.0",
+		"vite": "^8.0.16",
+		"vite-plugin-restart": "^2.0.0"
+	},
+	"optionalDependencies": {
+		"@esbuild/linux-x64": "*",
+		"@rolldown/binding-linux-x64-gnu": "*",
+		"@rollup/rollup-linux-arm64-gnu": "*",
+		"@rollup/rollup-linux-x64-gnu": "*",
+		"@tailwindcss/oxide-linux-x64-gnu": "*",
+		"lightningcss-linux-x64-gnu": "*"
 	},
 	"overrides": {
-		"laravel-mix": {
-			"webpack-dev-server": "^5.0.0"
+		"@tailwindcss/vite": {
+			"vite": "^8.0.16"
+		},
+		"vite-plugin-restart": {
+			"vite": "^8.0.16"
 		}
 	},
 	"engines": {
 		"node": ">=24"
 	},
-	"browserslist": [
-		"> 1%",
-		"last 2 versions"
-	],
 	"scripts": {
-		"dev": "mix",
-		"watch": "mix watch",
-		"prod": "mix --production",
-		"pull-database-prod": "./scripts/pull_db-prod.sh",
-		"pull-database-staging": "./scripts/pull_db-staging.sh",
-		"pull-assets-prod": "./scripts/pull_assets-prod.sh",
-		"pull-assets-staging": "./scripts/pull_assets-staging.sh",
-		"craft-migrate": "./craft migrate/all",
-		"craft-sync": "./craft project-config/sync",
-		"composer-update": "composer update",
-		"composer-install": "composer install",
-		"composer-outdated": "composer outdated",
+		"dev": "vite",
+		"build": "vite build",
+		"pull-database": "./scripts/pull_db.sh",
+		"pull-assets": "./scripts/pull_assets.sh",
+		"prettier": "./node_modules/prettier/bin/prettier.cjs --write templates",
 		"favicons": "node favicons.js"
 	}
 }

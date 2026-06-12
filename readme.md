@@ -36,7 +36,7 @@ If all goes well and you were able to install Composer globally, then this is th
 
 ## Node installation
 
-CraftCMS projects based on `craft-boilerplate` utilize `nodejs`, `npm`, and `laravel mix`, in order to run SASS processing, javascript minifcation, and autoprefixing.
+CraftCMS projects based on `craft-boilerplate` utilize `nodejs`, `npm`, and `vite`, in order to run css processing, javascript minifcation, and autoprefixing.
 
 Find out how to download and install `node` for your environment here (which includes `npm`): https://nodejs.org/en/download/
 
@@ -64,9 +64,6 @@ Follow these instructions when you need to start a brand new CraftCMS from scrat
 
 This CraftCMS project expects certain files to be in specific locations in order to be used.
 
-- [assets/](assets/) - Parent directory where javascripts/sass files are stored
-  - [assets/javascript/](assets/javascript/) - Your project's javascript files go here.
-  - [assets/sass/](assets/sass/) - Your project's SASS files go here ([Tailwind CSS](https://github.com/tailwindcss/tailwindcss) by default).
 - [config/](config/) - Parent directory which holds configuration files
   - [config/db.php](config/db.php) - Database configuration, but mostly pulled from `.env`
   - [config/general.php](config/general.php) - General CraftCMS configuration file
@@ -77,8 +74,11 @@ This CraftCMS project expects certain files to be in specific locations in order
   - [public/images/](public/images/) - Project's non-asset images are stored here (git controlled)
   - [public/index.php](public/index.php) - Root PHP file read by the webserver
   - [public/uploads/](public/uploads/) - Parent directory for all uploaded assets (not git controlled)
-  - [public/assets/](public/assets/) - **Compiled** assets (js/sass/etc) get put here (not git controlled)
+  - [public/dist/](public/dist/) - **Compiled** assets (js/css/etc) get put here (not git controlled)
 - [scripts/](scripts/) - Utility shell scripts to perform various functions
+- [src/](src/) - Parent directory where javascripts/css files are stored
+  - [src/js/](src/js/) - Your project's javascript files go here.
+  - [src/css/](src/css/) - Your project's CSS files go here ([Tailwind CSS](https://github.com/tailwindcss/tailwindcss) by default).
 - [storage/](storage/) - CraftCMS dynamically generated files, such as logs and backups.
 - [templates/](templates/) - The location for all Twig templates
 - [.env.example](.env.example) - Example `.env` file
@@ -87,10 +87,9 @@ This CraftCMS project expects certain files to be in specific locations in order
 - [craft](craft) - CraftCMS PHP console application
 - [craft.bat](craft.bat) - CraftCMS console loader for Windows
 - [favicon.js](favicon.js) - Automated utility for saving favicon and other files like that
-- [tailwind.config.js](tailwind.config.js) - Tailwind css configuration
-- [webpack.mix.js](webpack.mix.js) - Laravel Mix configuration (sass/js compilation, etc)
 - [package.json](package.json) - npm packages configuration file
 - [package-lock.json](package-lock.json) - npm packages information lock file
+- [vite.config.mjs](vite.config.mjs) - Vite configuration (css/js compilation, etc)
 
 More detailed information about the default structure can be found here: https://craftcms.com/docs/5.x/system/directory-structure.html
 
@@ -105,9 +104,9 @@ More detailed information about the default structure can be found here: https:/
 - Refer to this repo if the staging/prod environment is not using our setup scripts
 - It may be a little heavy handed so an alternative with the least amount of required bits is [here](https://craftcms.stackexchange.com/a/980/107)
 
-### NPM/Laravel Mix
+### NPM/Vite
 
-- Laravel Mix makes webpack implementation very easy and has a fairly basic setup for Sass and JS merging
+- Vite has a fairly basic setup for CSS and JS merging
 
 ### Database
 
@@ -115,7 +114,7 @@ More detailed information about the default structure can be found here: https:/
 - Add a blank database to your local host and then fill in the details of that when running `./craft setup`
 - Go to yourdomain.test/admin and craft will install a new version into that empty database
 
-### SASS
+### CSS
 
 - [Tailwind CSS](https://github.com/tailwindcss/tailwindcss) is included in the project
 
