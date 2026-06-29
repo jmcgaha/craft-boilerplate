@@ -14,19 +14,19 @@
 	"homepage": "https://github.com/jmcgaha/craft-boilerplate#readme",
 	"dependencies": {
 		"@tailwindcss/forms": "^0.5.11",
-		"@tailwindcss/postcss": "^4.3.1",
+		"@tailwindcss/postcss": "^4.3.2",
 		"@tailwindcss/typography": "^0.5.20",
-		"@tailwindcss/vite": "^4.3.1",
+		"@tailwindcss/vite": "^4.3.2",
 		"dotenv": "^17.4.2",
 		"favicons": "^7.3.0",
-		"tailwindcss": "^4.3.1"
+		"tailwindcss": "^4.3.2"
 	},
 	"devDependencies": {
 		"@prettier/plugin-php": "^0.25.0",
 		"@zackad/prettier-plugin-twig": "^0.17.0",
-		"prettier": "^3.8.4",
+		"prettier": "^3.9.3",
 		"prettier-plugin-tailwindcss": "^0.8.0",
-		"vite": "^8.0.16",
+		"vite": "^8.1.0",
 		"vite-plugin-restart": "^2.0.0"
 	},
 	"optionalDependencies": {
@@ -39,7 +39,7 @@
 	},
 	"overrides": {
 		"@tailwindcss/vite": {
-			"vite": "^8.0.16"
+			"vite": "^8.1.0"
 		},
 		"vite-plugin-restart": {
 			"vite": "^8.0.16"

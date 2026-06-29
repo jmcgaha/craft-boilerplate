@@ -21,7 +21,7 @@
 	"require": {
 		"boccdotdev/polymedia": "^1.2.1",
 		"craftcms/ckeditor": "^5.6.1",
-		"craftcms/cms": "^5.10.5",
+		"craftcms/cms": "^5.10.8.1",
 		"jainilnagar/env-beacon": "^1.0.0",
 		"nystudio107/craft-templatecomments": "^5.0.6",
 		"nystudio107/craft-vite": "^5.0.1",
