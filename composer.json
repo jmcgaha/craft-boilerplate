@@ -21,11 +21,11 @@
 	"require": {
 		"boccdotdev/polymedia": "^1.2.1",
 		"craftcms/ckeditor": "^5.6.1",
-		"craftcms/cms": "^5.10.8.1",
+		"craftcms/cms": "^5.10.10",
 		"jainilnagar/env-beacon": "^1.0.0",
 		"nystudio107/craft-templatecomments": "^5.0.6",
 		"nystudio107/craft-vite": "^5.0.1",
-		"vlucas/phpdotenv": "^5.6.3"
+		"vlucas/phpdotenv": "^5.6.4"
 	},
 	"require-dev": {
 		"craftcms/generator": "^2.2.0",
