@@ -19,12 +19,12 @@
 		"rss": "https://craftcms.com/changelog.rss"
 	},
 	"require": {
-		"boccdotdev/polymedia": "^1.2.1",
-		"craftcms/ckeditor": "^5.6.1",
-		"craftcms/cms": "^5.10.10",
+		"boccdotdev/polymedia": "^1.3.0",
+		"craftcms/ckeditor": "^5.7.0",
+		"craftcms/cms": "^5.10.14",
 		"jainilnagar/env-beacon": "^1.0.0",
 		"nystudio107/craft-templatecomments": "^5.0.6",
-		"nystudio107/craft-vite": "^5.0.1",
+		"nystudio107/craft-vite": "^5.0.2",
 		"vlucas/phpdotenv": "^5.6.4"
 	},
 	"require-dev": {
