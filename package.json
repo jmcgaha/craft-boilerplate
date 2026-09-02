@@ -26,7 +26,7 @@
 		"@zackad/prettier-plugin-twig": "^0.17.0",
 		"prettier": "^3.9.6",
 		"prettier-plugin-tailwindcss": "^0.8.1",
-		"vite": "^8.2.1",
+		"vite": "^8.2.2",
 		"vite-plugin-restart": "^2.0.0"
 	},
 	"optionalDependencies": {
@@ -39,10 +39,10 @@
 	},
 	"overrides": {
 		"@tailwindcss/vite": {
-			"vite": "^8.2.1"
+			"vite": "^8.2.2"
 		},
 		"vite-plugin-restart": {
-			"vite": "^8.1.4"
+			"vite": "^8.2.2"
 		}
 	},
 	"engines": {
